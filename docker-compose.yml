@@ -1,0 +1,32 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:14
+    container_name: feedback_db
+    environment:
+      POSTGRES_USER: kiran
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: feedbackdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kiran"]
+      interval: 10s
+      retries: 5
+
+  feedback-service:
+    build: ./backend/feedback-service
+    ports:
+      - "4001:4001"
+    depends_on:
+      - db
+
+  ai-service:
+    build: ./backend/ai-service
+    ports:
+      - "4002:4002"
+
+volumes:
+  pgdata:
