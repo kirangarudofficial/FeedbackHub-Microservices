@@ -40,12 +40,12 @@ This is a full-stack web application that allows users to submit feedback, which
 ```
 
 ai-feedback-app/
-├── frontend/                  # UI built using Bolt.new
+├── frontend/ # UI built using Bolt.new
 ├── backend/
-│   ├── feedback-service/      # Stores and fetches feedback
-│   ├── ai-service/            # Calls LLM to analyze feedback
-│   └── db/
-│       └── init.sql           # PostgreSQL schema
+│ ├── feedback-service/ # Stores and fetches feedback
+│ ├── ai-service/ # Calls LLM to analyze feedback
+│ └── db/
+│ └── init.sql # PostgreSQL schema
 ├── docker-compose.yml
 └── README.md
 
