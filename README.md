@@ -1,11 +1,3 @@
-# FeedbackHub-Microservices
-Sure! Here's a professional, clean `README.md` for your project:
-
----
-
-## 📘 README.md
-
-```md
 # 🧠 AI-Powered Feedback Collector
 
 This is a full-stack web application that allows users to submit feedback, which is automatically analyzed using OpenAI or DeepSeek LLM for sentiment and summary. Built with a modern frontend (via Bolt.new), Node.js microservices, and PostgreSQL running in Docker containers.
@@ -40,12 +32,12 @@ This is a full-stack web application that allows users to submit feedback, which
 ```
 
 ai-feedback-app/
-├── frontend/ # UI built using Bolt.new
+├── frontend/                  # UI built using Bolt.new
 ├── backend/
-│ ├── feedback-service/ # Stores and fetches feedback
-│ ├── ai-service/ # Calls LLM to analyze feedback
-│ └── db/
-│ └── init.sql # PostgreSQL schema
+│   ├── feedback-service/      # Stores and fetches feedback
+│   ├── ai-service/            # Calls LLM to analyze feedback
+│   └── db/
+│       └── init.sql           # PostgreSQL schema
 ├── docker-compose.yml
 └── README.md
 
@@ -61,6 +53,7 @@ ai-feedback-app/
 - OpenAI API key
 
 ### 1. Clone or Download Project
+
 ```bash
 git clone <your-repo-url>
 cd ai-feedback-app
@@ -129,3 +122,6 @@ Use Axios, fetch, or React Query.
 * UI: [Bolt.new](https://bolt.new)
 * AI: [OpenAI](https://platform.openai.com/)
 * Backend: Node.js + Docker
+
+```
+
